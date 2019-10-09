@@ -1,13 +1,18 @@
-<!--index.wxml-->
 <view class="container">
-  <view class="userinfo">
-    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
-    <block wx:else>
-      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
-      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
-    </block>
-  </view>
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
-  </view>
+    <view class="search">
+        <image src="../../images/jiahao.png" />
+        <input type="text" placeholder="type anything"/>
+    </view>
+    <view class="list">
+        <view class="item" wx:for="{{todos}}">
+            <icon type="circle" />
+            <text>{{item.item}}</text>
+            <icon type="clear" />
+        </view>
+    </view>
+    <view class="footer">
+        <text >toggle all</text>
+        <text>0 item left</text>
+        <text>clear</text>
+    </view>
 </view>
