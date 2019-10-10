@@ -1,6 +1,6 @@
 .container {
     border-top : 1rpx solid #e0e0e0;
-    padding-top: 10rpx;
+    padding: 10rpx;
 }
 .search {
     display: flex;
@@ -10,6 +10,33 @@
     padding: 20rpx;
 }
 .search image {
-    width: 40rpx;
-    height: 40rpx;
+    width: 60rpx;
+    height: 60rpx;
+    margin-right: 20rpx;
 }
+.list {
+    width: 100%;
+    border: 1rpx solid #e0e0e0;
+    margin-top: 20rpx;
+}
+.list .item {
+    display: flex;
+    border-bottom: 1rpx solid #e0e0e0;
+    padding: 20rpx;
+}
+.list .item:last-child {
+    border-bottom: 0;
+}
+.item text {
+    flex: 1;
+    margin-left: 20rpx;
+}
+
+
+.footer {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20rpx;
+}
+
