@@ -33,6 +33,11 @@
     margin-left: 20rpx;
 }
 
+.item .completed {
+    text-decoration: line-through;
+    color: rgb(124, 114, 114);
+}
+
 
 .footer {
     width: 100%;
