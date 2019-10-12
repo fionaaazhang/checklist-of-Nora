@@ -3,16 +3,16 @@
     padding: 10rpx;
 }
 .search {
+    width: 100%;
     display: flex;
     align-items: center;
     border: 1rpx solid #e0e0e0;
-    width: 100%;
-    padding: 20rpx;
+    font-size: 35rpx;
 }
 .search image {
     width: 60rpx;
     height: 60rpx;
-    margin-right: 20rpx;
+    margin: 20rpx;
 }
 .list {
     width: 100%;
@@ -23,6 +23,7 @@
     display: flex;
     border-bottom: 1rpx solid #e0e0e0;
     padding: 20rpx;
+    font-size: 30rpx;
 }
 .list .item:last-child {
     border-bottom: 0;
@@ -38,5 +39,6 @@
     display: flex;
     justify-content: space-between;
     padding: 20rpx;
+    font-size:30rpx;
 }
 
