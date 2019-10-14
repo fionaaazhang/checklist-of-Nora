@@ -43,8 +43,12 @@ Page({
     },
     delItem(e){
         const index = e.currentTarget.dataset.index;
+        const leftCount = this.data.leftCount - (this.data.todos[index].completed ? 0 : 1)
         this.data.todos.splice(index,1)
-        this.setData({todos: this.data.todos})
+        this.setData({
+            todos: this.data.todos,
+            leftCount: leftCount
+        })
     },
     toggleAllHandler(){
 
@@ -52,11 +56,13 @@ Page({
             this.data.todos.forEach(item =>{
                 item.completed = false
                 this.data.isAllCompleted = false
+                this.setData({leftCount : this.data.todos.length})
             })
         }else {
             this.data.todos.forEach(item =>{
                 item.completed = true
                 this.data.isAllCompleted = true
+                this.setData({leftCount : 0 })
             })
         }
         this.setData({todos: this.data.todos})
