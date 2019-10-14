@@ -6,7 +6,8 @@ Page({
             {item: "weapp", completed:true}, 
             {item: "vue", completed:false}
         ],
-        leftCount: 1
+        leftCount: 1,
+        isAllCompleted: false
     },
     
     // 1.获取输入框的值,重新设置给页面
@@ -46,10 +47,18 @@ Page({
         this.setData({todos: this.data.todos})
     },
     toggleAllHandler(){
-        this.data.todos.forEach(item =>{
-            item.completed = !item.completed
-        })
 
+        if(this.data.isAllCompleted){
+            this.data.todos.forEach(item =>{
+                item.completed = false
+                this.data.isAllCompleted = false
+            })
+        }else {
+            this.data.todos.forEach(item =>{
+                item.completed = true
+                this.data.isAllCompleted = true
+            })
+        }
         this.setData({todos: this.data.todos})
     },
     clearDoneHandler(){
